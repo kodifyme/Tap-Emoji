@@ -10,6 +10,10 @@ import UIKit
 final class MainViewController: UIViewController {
     
     private var collectionView = MainCollectionView(count: 20)
+    private let emojiArray = ["💪", "🏆", "😎", "😈", "💥", "❤️", "💋", "🥰", "🥳", "🤩"]
+    
+    private lazy var gameModel = GameModel(numberPairsCards:
+                                            collectionView.numberOfItems(inSection: 0) / 2)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +35,15 @@ final class MainViewController: UIViewController {
 extension MainViewController: SelectCollectionViewItemProtocol {
     
     func selectItem(indexPath: IndexPath) {
-        print(indexPath)
+        
+        gameModel.selectCard(index: indexPath.item)
+        
+        for (value, card) in gameModel.cards.enumerated() {
+            let cell = collectionView.cellForItem(at: [0, value]) as? MainCollectionViewCell
+            cell?.isHidden = card.isMatched
+            cell?.cellFaceUp = card.isFaceUp
+            cell?.emojiLabel.text = card.isFaceUp ? emojiArray[card.identifier] : ""
+        }
     }
 }
 

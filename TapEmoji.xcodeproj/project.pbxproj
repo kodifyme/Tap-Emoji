@@ -14,6 +14,8 @@
 		24124CEE284E397E00951E3D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24124CED284E397E00951E3D /* MainViewController.swift */; };
 		24124CF1284E3A9700951E3D /* MainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24124CF0284E3A9700951E3D /* MainCollectionView.swift */; };
 		24124CF3284E3C0800951E3D /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24124CF2284E3C0800951E3D /* MainCollectionViewCell.swift */; };
+		2457B16A284F465F00BA26EC /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457B169284F465F00BA26EC /* CardModel.swift */; };
+		2457B16C284F470D00BA26EC /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457B16B284F470D00BA26EC /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		24124CED284E397E00951E3D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		24124CF0284E3A9700951E3D /* MainCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionView.swift; sourceTree = "<group>"; };
 		24124CF2284E3C0800951E3D /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		2457B169284F465F00BA26EC /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		2457B16B284F470D00BA26EC /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		24124CEA284E359500951E3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2457B169284F465F00BA26EC /* CardModel.swift */,
+				2457B16B284F470D00BA26EC /* GameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,6 +207,8 @@
 				24124CF3284E3C0800951E3D /* MainCollectionViewCell.swift in Sources */,
 				24124CD6284E34EE00951E3D /* SceneDelegate.swift in Sources */,
 				24124CF1284E3A9700951E3D /* MainCollectionView.swift in Sources */,
+				2457B16C284F470D00BA26EC /* GameModel.swift in Sources */,
+				2457B16A284F465F00BA26EC /* CardModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

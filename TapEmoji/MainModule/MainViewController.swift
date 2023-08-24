@@ -13,15 +13,15 @@ final class MainViewController: UIViewController {
     private let emojiArray = ["💪", "🏆", "😎", "😈", "💥", "❤️", "💋", "🥰", "🥳", "🤩"]
     
     private lazy var gameModel = GameModel(numberPairsCards:
-                                            (collectionView.numberOfItems(inSection: 0)) / 2)
+                                            collectionView.numberOfItems(inSection: 0) / 2)
     
     private lazy var newGameButton: UIButton = {
         let button = UIButton(type: .system)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
         button.setTitle("New game", for: .normal)
-        button.layer.cornerRadius = 15
-        button.backgroundColor = .clear
+        button.layer.cornerRadius = 10
+        button.titleLabel?.font = .boldSystemFont(ofSize: 20)
         button.addTarget(self, action: #selector(didTapped), for: .touchUpInside)
+        button.backgroundColor = UIColor(named: "")
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -71,15 +71,15 @@ extension MainViewController {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60),
+            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            collectionView.heightAnchor.constraint(equalToConstant: 550),
+            collectionView.heightAnchor.constraint(equalToConstant: 500),
             
-            newGameButton.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 40),
+            newGameButton.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 50),
             newGameButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             newGameButton.heightAnchor.constraint(equalToConstant: 60),
-            newGameButton.widthAnchor.constraint(equalToConstant: 200)
+            newGameButton.widthAnchor.constraint(equalToConstant: 120)
         ])
     }
 }

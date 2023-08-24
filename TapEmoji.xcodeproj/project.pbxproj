@@ -110,8 +110,8 @@
 		24124CEB284E359E00951E3D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				24124CEF284E3A8100951E3D /* Cells */,
 				24124CF0284E3A9700951E3D /* MainCollectionView.swift */,
+				24124CEF284E3A8100951E3D /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";

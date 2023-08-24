@@ -39,6 +39,15 @@ final class MainCollectionView: UICollectionView {
         register(MainCollectionViewCell.self,
                  forCellWithReuseIdentifier: MainCollectionViewCell().idMainCollectionViewCell)
     }
+    
+    func resetCards() {
+        for index in 0..<count {
+            let cell = cellForItem(at: IndexPath(item: index, section: 0)) as? MainCollectionViewCell
+            cell?.isHidden = false
+            cell?.cellFaceUp = false
+            cell?.emojiLabel.text = ""
+        }
+    }
 }
 
 //MARK: - UICollectionViewDataSource
